@@ -1,4 +1,4 @@
-# ChatGPT AutoHotkey and Image Context
+# ChatGPT AutoHotkey w/t Image Context
 
 This script provides hotkey-based automation for interacting with ChatGPT and the Windows Terminal. It uses the snipping tool and `ImageMagick` to take screenshots and pipe the output to `chatgpt-cli`.
 
