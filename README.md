@@ -2,7 +2,7 @@
 
 This script provides hotkey-based automation for interacting with ChatGPT and the Windows Terminal. It uses the snipping tool and `ImageMagick` to take screenshots and pipe the output to `chatgpt-cli`.
 
-[Example](https://omni-strapi-assets.nyc3.digitaloceanspaces.com/2025_04_12_11_58_28_05b412e458.mp4)
+[![Demonstration](https://omni-strapi-assets.nyc3.digitaloceanspaces.com/1744474173_2810aec55a.png)](https://omni-strapi-assets.nyc3.digitaloceanspaces.com/2025_04_12_11_58_28_05b412e458.mp4)
 
 ## Features 
 - Hotkey: Open a terminal window
