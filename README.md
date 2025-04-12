@@ -2,6 +2,7 @@
 
 This script provides hotkey-based automation for interacting with ChatGPT and the Windows Terminal. It uses the snipping tool and `ImageMagick` to take screenshots and pipe the output to `chatgpt-cli`.
 
+[Example](https://omni-strapi-assets.nyc3.digitaloceanspaces.com/2025_04_12_11_58_28_05b412e458.mp4)
 
 ## Features 
 - Hotkey: Open a terminal window
@@ -22,6 +23,9 @@ This script provides hotkey-based automation for interacting with ChatGPT and th
 3. **Configure a `prompt.md` File**
    - Create a `prompt.md` file in the `.chatgpt-cli` directory under your user profile (e.g., `C:\Users\<YourUsername>\.chatgpt-cli\prompt.md`).
    - See the `sample_prompt.md` in this repo.
+
+4. **(Optional) Add Windows Terminal profiles for ChatGPT**
+   - For the best looking result, add two new profiles to Windows Terminal: `ChatGPT` and `ChatGPTImage`. You can configure the appearance of these any way you'd like.
 
 ## Usage
 *Note: Ensure that you do not run this script from a sandboxed folder. Backup folders like OneDrive seem to cause issues with the ability for executables to be read off the PATH.*
