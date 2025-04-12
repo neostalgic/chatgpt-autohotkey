@@ -11,20 +11,23 @@ This script provides hotkey-based automation for interacting with ChatGPT and th
 
 ## Prerequisites
 
-1. **Install `chatgpt-cli`**
+1. **Install AutoHotkey**
+   - Download AutoHotkey and install AutoHotkey from its [official website](https://www.autohotkey.com/).
+
+2. **Install `chatgpt-cli`**
    - Follow the installation instructions for `chatgpt-cli` from its [official repository](https://github.com/kardolus/chatgpt-cli). 
    - Ensure that the binary file for `chatgpt-cli` is named `chatgpt` and is available in your APTH environment variable.
    - Ensure you setup `OPEN_API_KEY` as an environment variable. 
 
-2. **Install `ImageMagick`**
+3. **Install `ImageMagick`**
    - Download and install ImageMagick from [https://imagemagick.org](https://imagemagick.org).
    - Ensure that the `magick` command is available in your system's PATH.
 
-3. **Configure a `prompt.md` File**
+4. **Configure a `prompt.md` File**
    - Create a `prompt.md` file in the `.chatgpt-cli` directory under your user profile (e.g., `C:\Users\<YourUsername>\.chatgpt-cli\prompt.md`).
    - See the `sample_prompt.md` in this repo.
 
-4. **(Optional) Add Windows Terminal profiles for ChatGPT**
+5. **(Optional) Add Windows Terminal profiles for ChatGPT**
    - For the best looking result, add two new profiles to Windows Terminal: `ChatGPT` and `ChatGPTImage`. You can configure the appearance of these any way you'd like.
 
 ## Usage
