@@ -2,7 +2,6 @@
 
 This script provides hotkey-based automation for interacting with ChatGPT and the Windows Terminal. It uses the snipping tool and `ImageMagick` to take screenshots and pipe the output to `chatgpt-cli`.
 
-*Note:* Ensure that you do not run this script from a sandboxed folder. Backup folders like OneDrive seem to cause issues with this.
 
 ## Features 
 - Hotkey: Open a terminal window
@@ -12,7 +11,9 @@ This script provides hotkey-based automation for interacting with ChatGPT and th
 ## Prerequisites
 
 1. **Install `chatgpt-cli`**
-   - Follow the installation instructions for `chatgpt-cli` from its official repository.
+   - Follow the installation instructions for `chatgpt-cli` from its [official repository](https://github.com/kardolus/chatgpt-cli). 
+   - Ensure that the binary file for `chatgpt-cli` is named `chatgpt` and is available in your APTH environment variable.
+   - Ensure you setup `OPEN_API_KEY` as an environment variable. 
 
 2. **Install `ImageMagick`**
    - Download and install ImageMagick from [https://imagemagick.org](https://imagemagick.org).
@@ -20,24 +21,16 @@ This script provides hotkey-based automation for interacting with ChatGPT and th
 
 3. **Configure a `prompt.md` File**
    - Create a `prompt.md` file in the `.chatgpt-cli` directory under your user profile (e.g., `C:\Users\<YourUsername>\.chatgpt-cli\prompt.md`).
-   - Use the following example as a template:
+   - See the `sample_prompt.md` in this repo.
 
-```markdown
-A(ChatGPT-4o)
+## Usage
+*Note: Ensure that you do not run this script from a sandboxed folder. Backup folders like OneDrive seem to cause issues with the ability for executables to be read off the PATH.*
 
-You are Cal, a large language model trained by OpenAI and my (Regan) personal assistant.
+1. Ensure that all prerequisites are installed and configured.
+2. Run the script using AutoHotkey v2 (usually just double-click in explorer)
+3. Use the hotkeys to interact with ChatGPT or manage screenshots.
 
-Image input capabilities: Enabled Personality: v2 Over the course of the conversation, you adapt to the user’s tone and preference. Try to match the user’s vibe, tone, and generally how they are speaking. You want the conversation to feel natural. You engage in authentic conversation by responding to the information provided, asking relevant questions, and showing genuine curiosity. If natural, continue the conversation with casual conversation.
----
-
-## 🔧 Environment Overview
-
-### Hotkeys
-You know the following aliases I use in my terminal:
-- `Alt + Mouse 4` → Open a terminal
-- `Alt + Middle Click` → Take a screenshot with the snipping tool and feed the output to Cal, starting a new conversation.
-- `Alt + Mouse 5` → Open Cal and start a new conversation.
-```
+Images will be created under `C:\Users\<YourUsername>\.chatgpt-cli\images\`. You may want to clean these out from-time-to-time.
 
 ## Default Hotkeys
 
@@ -48,20 +41,8 @@ You know the following aliases I use in my terminal:
 ## Configuration
 
 The script uses environment variables for customization. You can set the following variables to override defaults:
-
 - `CHATGPT_PROFILE`: The terminal profile to use for ChatGPT commands (default: `Windows PowerShell`).
 - `CHATGPT_PROMPT_PATH`: Path to the `prompt.md` file (default: `C:\Users\<YourUsername>\.chatgpt-cli\prompt.md`).
 - `CHATGPT_IMAGE_PROFILE`: The terminal profile to use for ChatGPT image commands (default: `ChatGptImage`).
 - `CHATGPT_IMAGE_DIR`: Directory to save screenshots (default: `C:\Users\<YourUsername>\.chatgpt-cli\images`).
 - `DEFAULT_TERMINAL_PROFILE`: The default terminal profile (default: `Windows PowerShell`).
-
-## Usage
-
-1. Ensure that all prerequisites are installed and configured.
-2. Run the script using AutoHotkey v2.
-3. Use the hotkeys to interact with ChatGPT or manage screenshots.
-
-## Notes
-
-- The script dynamically resolves user profile paths using the `A_UserProfile` variable, making it adaptable to any Windows user.
-- Ensure that the `chatgpt-cli` and `magick` commands are accessible from the terminal.
